@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
+    <link rel="shortcut icon" href="#">
+    <title>The Planets</title>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <p>THE PLANETS</p>
+        </div>
+
+        <img id="hamburger" class="navbar__img" src="images/menu/menu-icon.png" alt="">
+
+        <ul id="menu" class="navbar__container__menu">
+            <li class="navbar__container__menu__item" id="mercury">MERCURY</li>
+            <li class="navbar__container__menu__item" id="venus">VENUS</li>
+            <li class="navbar__container__menu__item" id="earth">EARTH</li>
+            <li class="navbar__container__menu__item" id="mars">MARS</li>
+            <li class="navbar__container__menu__item" id="jupiter">JUPITER</li>
+            <li class="navbar__container__menu__item" id="saturn">SATURN</li>
+            <li class="navbar__container__menu__item" id="uranus">URANUS</li>
+            <li class="navbar__container__menu__item" id="neptune">NEPTUNE</li>
+        </ul>
+    </nav>
+    
+    <!--Main Content-->
+    <div class="content">
+        <div class="content__planet">
+            <div class="content__planet__item">
+                <img src="" id="overviewPath">
+                <img src="" id="internalStructurePath">
+                <img src="" id="surfaceGeologyPath">
+            </div>
+        </div>
+        <div class="content__text">
+            <h1 id="planetName"></h1>
+            <p id="overview"></p>
+            <p id="internalStructure"></p>
+            <p id="surfaceGeology"></p>
+            <a href="" id="sourceURL" target="_blank">Source: <u>Wikipedia</u></a>
+            <div id="select01" class="content__text__option" onclick="toggleVisibility('overviewPath','overview');">
+                <p>01</p>
+                <p>Overview</p>
+            </div>
+            <div id="select02" class="content__text__option" onclick="toggleVisibility('internalStructurePath','internalStructure');">
+                <p>02</p>
+                <p>Internal Structure</p>
+            </div>
+            <div id="select03" class="content__text__option" onclick="toggleVisibility('surfaceGeologyPath','surfaceGeology');">
+                <p>03</p>
+                <p>Surface Geology</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Data-->
+    <div class="data">
+        <div class="data__card">
+            <p class="data__card__title">Rotation Time</p>
+            <p class="data__card__content" id="rotationTime"></p>
+        </div>
+        <div class="data__card">
+            <p class="data__card__title">Revolution Time</p>
+            <p class="data__card__content" id="revolutionTime"></p>
+        </div>
+        <div class="data__card">
+            <p class="data__card__title">Radius</p>
+            <p class="data__card__content" id="radius"></p>
+        </div>
+        <div class="data__card">
+            <p class="data__card__title">Average Temp.</p>
+            <p class="data__card__content" id="averageTemp"></p>
+        </div>
+    </div>
+
+    <script type="application/json" src="json/planets.json"></script>
+    <script type="text/javascript" src="script/script.js"></script>
+</body>
+</html>
