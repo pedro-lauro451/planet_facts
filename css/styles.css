@@ -2,7 +2,6 @@
   --main-background-color: #060624;
   --main-text-color: #a1afaf;
   --main-text-hover-color: #ffffff;
-  --button-hover-color: #31b5e7;
   --border-color: #272644;
 }
 
@@ -52,7 +51,7 @@ a {
   text-align: center;
 }
 .navbar__container__menu__item {
-  padding: 0px 20px;
+  padding: 33px 20px;
 }
 .navbar__container__menu__item:hover {
   cursor: pointer;
@@ -103,7 +102,6 @@ a {
   margin-left: 10px;
 }
 .content__text__option:hover {
-  background-color: var(--button-hover-color);
   cursor: pointer;
 }
 .content__text__option:hover p {

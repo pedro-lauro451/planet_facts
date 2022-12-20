@@ -2,7 +2,6 @@
     --main-background-color: #060624;
     --main-text-color: #a1afaf;
     --main-text-hover-color: #ffffff;
-    --button-hover-color: #31b5e7;
     --border-color: #272644;
  }
  
@@ -61,7 +60,7 @@
  
              &__item
              {
-                 padding: 0px 20px;
+                 padding: 33px 20px;
              }
  
              &__item:hover
@@ -135,7 +134,6 @@
 
         &__option:hover
         {
-            background-color: var(--button-hover-color);
             cursor: pointer;
 
             p

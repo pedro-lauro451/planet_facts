@@ -21,6 +21,10 @@ var overviewPath = document.getElementById('overviewPath');
 var internalStructurePath = document.getElementById('internalStructurePath');
 var surfaceGeologyPath = document.getElementById('surfaceGeologyPath');
 
+var overviewSelect = document.getElementById('overview-select');
+var structureSelect = document.getElementById('internal-structure-select');
+var geologySelect = document.getElementById('surface-geology-select');
+
 internalStructurePath.style.display = "none";
 surfaceGeologyPath.style.display = "none";
 
@@ -36,6 +40,8 @@ var visibleTextElement = null;
 const menu = document.getElementById('menu');
 const hamburger = document.getElementById('hamburger');
 var active = false;
+
+var colors = ["#6999aa","#e29f58","#4d53ea","#bf3c32","#d86534","#ecb55a","#43bbb2","#2255ca"];
 
 hamburger.onclick = function()
 {
@@ -122,33 +128,43 @@ function fetchData(arrayPosition)
 
 fetchData(2);
 
+var content = 2;
+
 function renderPlanetInfo(selectedPlanet)
 {
     switch(selectedPlanet)
     {
         case "mercury":
             fetchData(0);
+            content = 0;
             break;
         case "venus":
             fetchData(1);
+            content = 1;
             break;
         case "earth":
             fetchData(2);
+            content = 2;
             break;
         case "mars":
             fetchData(3);
+            content = 3;
             break;
         case "jupiter":
             fetchData(4);
+            content = 4;
             break;
         case "saturn":
             fetchData(5);
+            content = 5;
             break;
         case "uranus":
             fetchData(6);
+            content = 6;
             break;
         case "neptune":
             fetchData(7);
+            content = 7;
             break;
     }
 };
@@ -158,9 +174,29 @@ mercury.onclick = function()
     renderPlanetInfo("mercury");
 };
 
+mercury.onmouseover = function()
+{
+    mercury.setAttribute("style", "background-color:" + colors[0]);
+}
+
+mercury.onmouseleave = function()
+{
+    mercury.setAttribute("style", "background-color: transparent");
+}
+
 venus.onclick = function()
 {
     renderPlanetInfo("venus");
+}
+
+venus.onmouseover = function()
+{
+    venus.setAttribute("style", "background-color:" + colors[1]);
+}
+
+venus.onmouseleave = function()
+{
+    venus.setAttribute("style", "background-color: transparent");
 }
 
 earth.onclick = function()
@@ -168,9 +204,29 @@ earth.onclick = function()
     renderPlanetInfo("earth");
 }
 
+earth.onmouseover = function()
+{
+    earth.setAttribute("style", "background-color:" + colors[2]);
+}
+
+earth.onmouseleave = function()
+{
+    earth.setAttribute("style", "background-color: transparent");
+}
+
 mars.onclick = function()
 {
     renderPlanetInfo("mars");
+}
+
+mars.onmouseover = function()
+{
+    mars.setAttribute("style", "background-color:" + colors[3]);
+}
+
+mars.onmouseleave = function()
+{
+    mars.setAttribute("style", "background-color: transparent");
 }
 
 jupiter.onclick = function()
@@ -178,9 +234,29 @@ jupiter.onclick = function()
     renderPlanetInfo("jupiter");
 }
 
+jupiter.onmouseover = function()
+{
+    jupiter.setAttribute("style", "background-color:" + colors[4]);
+}
+
+jupiter.onmouseleave = function()
+{
+    jupiter.setAttribute("style", "background-color: transparent");
+}
+
 saturn.onclick = function()
 {
     renderPlanetInfo("saturn");
+}
+
+saturn.onmouseover = function()
+{
+    saturn.setAttribute("style", "background-color:" + colors[5]);
+}
+
+saturn.onmouseleave = function()
+{
+    saturn.setAttribute("style", "background-color: transparent");
 }
 
 uranus.onclick = function()
@@ -188,7 +264,57 @@ uranus.onclick = function()
     renderPlanetInfo("uranus");
 }
 
+uranus.onmouseover = function()
+{
+    uranus.setAttribute("style", "background-color:" + colors[6]);
+}
+
+uranus.onmouseleave = function()
+{
+    uranus.setAttribute("style", "background-color: transparent");
+}
+
 neptune.onclick = function()
 {
     renderPlanetInfo("neptune");
+}
+
+neptune.onmouseover = function()
+{
+    neptune.setAttribute("style", "background-color:" + colors[7]);
+}
+
+neptune.onmouseleave = function()
+{
+    neptune.setAttribute("style", "background-color: transparent");
+}
+
+overviewSelect.onmouseover = function()
+{
+    overviewSelect.setAttribute("style", "background-color:" + colors[content] + ";border-color:" + colors[content]);
+}
+
+overviewSelect.onmouseleave = function()
+{
+    overviewSelect.setAttribute("style", "background-color: transparent; border-color: #272644");
+}
+
+structureSelect.onmouseover = function()
+{
+    structureSelect.setAttribute("style", "background-color:" + colors[content] + ";border-color:" + colors[content]);
+}
+
+structureSelect.onmouseleave = function()
+{
+    structureSelect.setAttribute("style", "background-color: transparent; border-color: #272644");
+}
+
+geologySelect.onmouseover = function()
+{
+    geologySelect.setAttribute("style", "background-color:" + colors[content] + ";border-color:" + colors[content]);
+}
+
+geologySelect.onmouseleave = function()
+{
+    geologySelect.setAttribute("style", "background-color: transparent; border-color: #272644");
 }
